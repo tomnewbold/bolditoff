@@ -46,4 +46,5 @@ group :development, :test do
 end
 #CSS Framework
 gem 'bootstrap-sass'
-
+#User authentication
+gem 'devise'
