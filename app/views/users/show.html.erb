@@ -4,8 +4,8 @@
 
 <%= link_to "Create a new item", new_item_path, class: 'btn btn-primary' %>
 
-<% current_user.items.each do |item| %>
-  <p><%= item.name %></p>
-<% end %>
+<div>
+<%= render partial: 'items/item'%>
+</div>
 
 
