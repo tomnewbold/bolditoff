@@ -1,5 +1,6 @@
 <% current_user.items.each do |item| %>
   <p><%= item.name %></p>
   <%= link_to "", item, method: :delete,  class: 'glyphicon glyphicon-ok' %>
+  <p><%= time_left(item) %></p>
 <% end %>
 
