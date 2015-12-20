@@ -1,2 +1,20 @@
-<h1>Bolditoff</h1>
+<div style="background:transparent !important" class=" jumbotron text-center">
+  <h1 class="text-center">Bolditoff </h1>
+  <h4 class="col-md-6 col-md-offset-3"> A self destructing to-do list to keep you focused on the things that really matter.</h4>
+  <br>
+  <br>
+  <br>
+    <% if !user_signed_in? %>
+  <p><a class="btn btn-primary btn-lg" href= "/users/sign_up" role="button">Sign up!</a></p>
+  <%end%>
+</div>
+
+<div class="img-responsive text-center">
+<%= image_tag 'bolditoffss.png' %>
+</div>
+
+
+
+
+
 
