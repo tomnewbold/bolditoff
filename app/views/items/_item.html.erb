@@ -1,9 +1,10 @@
-<div class="panel panel-default">
-<% current_user.items.each do |item| %>
-
-  <h5 class ="panel-body"><%= item.name %>      <%= link_to "", item, method: :delete,  class: 'glyphicon glyphicon-ok' %></h5>
-  <p class="panel-heading"><%= time_left(item) %></p>
-<% end %>
+<div class="panel panel-default ">
+  <% current_user.items.each do |item| %>
+    <div class="<%= item.id %>">
+      <h5 class ="panel-body"><%= item.name %>      <%= link_to "", item, method: :delete, remote: true,  class: 'glyphicon glyphicon-ok' %></h5>
+      <p class="panel-heading"><%= time_left(item) %></p>
+    </div>
+  <% end %>
 </div>
 
 

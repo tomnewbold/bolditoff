@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   
   def create
     @item = Item.new(params.require(:item).permit(:name))
@@ -13,14 +14,12 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    if @item.destroy
-        flash[:notice] = "Item  was deleted successfully."
-        redirect_to "/users/show"
-      else
-        flash[:error] = "There was an error deleting the item. Please try again."
-        redirect_to "/users/show"
-      end
+    @item.destroy
     end
+    respond_to do |format|
+       format.html
+       format.js 
+     end
   end 
 
  
